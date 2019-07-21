@@ -25,6 +25,10 @@ Download from a subreddit with limit & relevence (Hot,New,Top):
 $ reddit-id sublr <subreddit-name> <limitofimages> <relevence>
 ```
 
+```sh
+Should have a memes directory in Pictures (works for both linux/windows)
+```
+
 ## App Info
 
 ### Author
