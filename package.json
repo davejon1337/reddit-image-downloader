@@ -1,6 +1,6 @@
 {
   "name": "reddit-id",
-  "version": "0.0.8",
+  "version": "0.1.8",
   "description": "A CLI/Script to download images from Reddit.",
   "main": "index.js",
   "preferGlobal": true,

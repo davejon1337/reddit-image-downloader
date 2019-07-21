@@ -3,7 +3,7 @@
 A Command line interface to download images from reddit using its API.
 
 ### Version
-0.0.8
+0.1.8
 
 ## Usage
 
@@ -18,11 +18,11 @@ $ npm i reddit-id
 
 Download from a subreddit:
 ```sh
-$ node Commands.js sub [NAME]
+$ reddit-id sub [NAME]
 ```
 Download from a subreddit with limit & relevence (Hot,New,Top):
 ```sh
-$ node Commands.js sublr <subreddit-name> <limitofimages> <relevence>
+$ reddit-id sublr <subreddit-name> <limitofimages> <relevence>
 ```
 
 ## App Info
@@ -33,7 +33,7 @@ davejon1337
 
 ### Version
 
-0.0.8
+0.1.8
 
 ### License
 
