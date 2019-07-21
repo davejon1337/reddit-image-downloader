@@ -1,5 +1,7 @@
+/* eslint-disable no-plusplus */
 /* eslint-disable no-console */
 /* eslint-disable func-names */
+const homedir = require('os').homedir();
 const Wrapper = require('./ApiClient');
 
 const { saveImage } = require('./ImageDownloader');
@@ -10,10 +12,10 @@ exports.downloadImages = async function (name = 'dankmemes', limit = 25, rel = '
   try {
     const dat = await reddit.getFromSubReddit(name, limit, rel);
     const posts = dat.data.children;
-    posts.forEach(async (post, i) => {
-      await saveImage(post.data.url, `${__dirname}/images/image-${i + 1 + (Math.floor(Math.random() * 665))}`);
+    posts.forEach(async (post, index) => {
+      await saveImage(post.data.url, `${homedir}/Pictures/images`, index + 1);
     });
   } catch (e) {
-    console.error(e);
+    console.log('*****----------- Download has failed -----------*****');
   }
 };

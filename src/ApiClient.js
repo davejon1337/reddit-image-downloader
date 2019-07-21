@@ -7,8 +7,12 @@ class ApiWrapper {
   }
 
   async getDataFromApi(url) {
-    const res = await get(url);
-    return res.data;
+    try {
+      const res = await get(url);
+      return res.data;
+    } catch (e) {
+      console.log('*****----------- Download has failed -----------*****');
+    }
   }
 
   async getFromSubReddit(subReddit = 'dankmemes', limit = 25, relevence = 'hot') {
@@ -16,7 +20,7 @@ class ApiWrapper {
       const url = `${this.BASE_URL}/r/${subReddit}.json?limit=${limit}&sort=${relevence}`;
       return await this.getDataFromApi(url);
     } catch (e) {
-      console.log(e);
+      console.log('*****----------- Download has failed -----------*****');
     }
   }
 
@@ -25,7 +29,7 @@ class ApiWrapper {
       const url = `${this.BASE_URL}/r/${subReddit}/search.json?q=${query}&limit=${limit}&sort=${relevence}`;
       return await this.getDataFromApi(url);
     } catch (e) {
-      console.log(e);
+      console.log('*****----------- Download has failed -----------*****');
     }
   }
 }
