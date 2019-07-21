@@ -1,25 +1,28 @@
 # reddit-image-downloader CLI
 
-Command line interface to download images from reddit using its API.
+A Command line interface to download images from reddit using its API.
 
 ### Version
-0.0.4
+0.0.8
 
 ## Usage
 
 ### Installation
 
-Install the dependencies
 
 ```sh
-$ npm install
+$ npm i reddit-id
 ```
 
 ### Commands
 
-Download from a subreddit
+Download from a subreddit:
 ```sh
 $ node Commands.js sub [NAME]
+```
+Download from a subreddit with limit & relevence (Hot,New,Top):
+```sh
+$ node Commands.js sublr <subreddit-name> <limitofimages> <relevence>
 ```
 
 ## App Info
@@ -30,7 +33,7 @@ davejon1337
 
 ### Version
 
-0.0.4
+0.0.8
 
 ### License
 
