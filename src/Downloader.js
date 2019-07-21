@@ -13,7 +13,7 @@ exports.downloadImages = async function (name = 'dankmemes', limit = 25, rel = '
     const dat = await reddit.getFromSubReddit(name, limit, rel);
     const posts = dat.data.children;
     posts.forEach(async (post, index) => {
-      await saveImage(post.data.url, `${homedir}/Pictures/images`, index + 1);
+      await saveImage(post.data.url, `${homedir}/Pictures/memes`, index + 1);
     });
   } catch (e) {
     console.log('*****----------- Download has failed -----------*****');
