@@ -3,7 +3,7 @@
 A Command line interface to download images from reddit using its API.
 
 ### Version
-0.4.0
+0.4.5
 
 ## Usage
 
@@ -37,7 +37,7 @@ davejon1337
 
 ### Version
 
-0.4.0
+0.4.5
 
 ### License
 

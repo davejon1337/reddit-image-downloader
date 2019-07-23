@@ -19,3 +19,14 @@ exports.downloadImages = async function (name = 'dankmemes', limit = 25, rel = '
     console.log('*****----------- Download has failed -----------*****');
   }
 };
+exports.downloadQueryImages = async function (query, name, limit, rel) {
+  try {
+    const dat = await reddit.searchSubReddit(query, name, limit, rel);
+    const posts = dat.data.children;
+    posts.forEach(async (post, index) => {
+      await saveImage(post.data.url, `${homedir}/Pictures/memes`, index + 1);
+    });
+  } catch (e) {
+    console.log('*****----------- Download has failed -----------*****');
+  }
+};
