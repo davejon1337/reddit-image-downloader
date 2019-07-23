@@ -3,7 +3,7 @@
 A Command line interface to download images from reddit using its API.
 
 ### Version
-0.4.5
+0.4.6
 
 ## Usage
 
@@ -24,10 +24,15 @@ Download from a subreddit with limit & relevence (Hot,New,Top):
 ```sh
 $ reddit-id sublr <subreddit-name> <limitofimages> <relevence>
 ```
+Download from a subreddit by searching:
+```sh
+$ reddit-id query <searchquery> <subredditname> <limit> <rel>
+```
 
 ```sh
 Should have a memes directory in Pictures (works for both linux/windows)
 ```
+
 
 ## App Info
 
