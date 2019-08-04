@@ -1,11 +1,13 @@
 #!/usr/bin/env node
 /* eslint-disable func-names */
 const program = require('commander');
+const chalk = require('chalk');
 const { downloadImages, downloadQueryImages } = require('./src/Downloader');
 
+console.log(chalk.red.bold('Script will exit in 90 seconds if any image download fails.'));
 
 program
-  .version('0.4.5')
+  .version('0.5.0')
   .description('A CLI/Script to download images from reddit using its API.');
 
 program
@@ -44,5 +46,10 @@ program
       console.log('*****----------- Download has failed -----------*****');
     }
   });
+
+setTimeout(() => {
+  console.log(chalk.red.bold('EXITING SCRIPT!!!'));
+  process.exit(1);
+}, 100000);
 
 program.parse(process.argv);

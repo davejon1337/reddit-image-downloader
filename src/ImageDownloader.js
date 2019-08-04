@@ -3,28 +3,22 @@
 const axios = require('axios');
 const fs = require('fs');
 
-exports.saveImage = async function (url, path, index) {
+exports.saveImage = async function (url, path) {
   try {
     const arr = url.split('/');
     const lastInd = arr.length - 1;
     const filename = arr[lastInd];
-    axios({
+    const res = await axios({
       url,
       responseType: 'stream',
-    }).then((res) => {
-      new Promise((resolve, reject) => {
-        res.data.pipe(fs.createWriteStream(`${path}/${filename}`))
-          .on('finish', () => {
-            console.log(`*****----------- Image has been downloaded as ${filename} -----------*****`);
-            console.log(`*****----------- Total Downloaded  ${index} -----------*****`);
-            resolve();
-          }).on('error', (e) => {
-            console.log('*****----------- Download has failed -----------*****');
-            reject();
-          });
-      });
     });
+    res.data.pipe(fs.createWriteStream(`${path}/${filename}`))
+      .on('finish', () => {
+        console.log(`*****----------- Image downloaded as ${filename} -----------*****`);
+      }).on('error', (e) => {
+        console.log('*****----------- Download failed -----------*****');
+      });
   } catch (e) {
-    console.log('*****----------- Download has failed -----------*****');
+    console.log('*****----------- Download failed -----------*****');
   }
 };
