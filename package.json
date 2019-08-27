@@ -21,9 +21,5 @@
     "chalk": "^2.4.2",
     "commander": "^2.20.0"
   },
-  "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-plugin-import": "^2.18.2"
-  }
+  "devDependencies": {}
 }

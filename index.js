@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-/* eslint-disable func-names */
 const program = require('commander');
 const chalk = require('chalk');
 const { downloadImages, downloadQueryImages } = require('./src/Downloader');

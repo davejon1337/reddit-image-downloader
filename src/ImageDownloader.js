@@ -1,5 +1,3 @@
-/* eslint-disable no-new */
-/* eslint-disable func-names */
 const axios = require('axios');
 const fs = require('fs');
 

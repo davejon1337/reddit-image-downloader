@@ -1,6 +1,4 @@
-/* eslint-disable no-plusplus */
-/* eslint-disable no-console */
-/* eslint-disable func-names */
+
 const homedir = require('os').homedir();
 const Wrapper = require('./ApiClient');
 
